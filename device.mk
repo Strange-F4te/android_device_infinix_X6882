@@ -48,12 +48,18 @@ PRODUCT_PACKAGES += \
     create_pl_dev \
     create_pl_dev.recovery
 
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    com.android.hardware.boot:64 \
+    android.hardware.boot-service.default_recovery:64
+
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/mediatek 
 
 # Keylayout
 PRODUCT_COPY_FILES += \
