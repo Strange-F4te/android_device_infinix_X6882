@@ -30,6 +30,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := mt6789
 BOARD_HAS_MTK_HARDWARE := true
 
+# SEPolicy
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
