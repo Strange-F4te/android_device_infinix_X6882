@@ -6,6 +6,7 @@
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 34
@@ -20,6 +21,8 @@ PRODUCT_SOONG_NAMESPACES += \
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/mtk-tpd.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/mtk-tpd.kl
+
+PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
 
 # Rootdir
 PRODUCT_PACKAGES += \
