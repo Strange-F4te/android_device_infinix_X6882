@@ -36,5 +36,8 @@ include device/mediatek/sepolicy_vndr/SEPolicy.mk
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Vendor Security Patch
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+
 # Inherit the proprietary files
 include vendor/infinix/X6882/BoardConfigVendor.mk
